@@ -1,0 +1,551 @@
+body {
+	/*background: #2cc0d3; */
+	font-family: "Baskerville Old Face";
+	font-size: 110%;
+	margin: 0; /* Убираем отступы */
+}
+
+header, main, footer { 
+	min-width: 855px; 
+}
+
+/*ссылки*/
+a {
+	text-decoration: none;
+	color: black;
+}
+a:hover { /* псевдокласс для подчеркивания при наведении*/
+	text-decoration: underline;
+	color: #00a85a;
+}
+
+h3, h4 {
+	font-family: "Baskerville Old Face";
+	font-size: 125%;
+}
+h2 {
+	font-size:25px;
+	padding: 20px;
+	color: #00a85a;
+}
+.image h2 {
+	font-size:25px;
+	padding: 20px;
+	color: #ffffff;
+}
+h3 {
+	padding-left: 20px;
+}
+
+header { 
+	background: white; 
+	overflow: auto;
+	padding: 10px; 
+}
+header img {
+	float: left;
+	padding-left: 100px;
+}
+header h1 {
+	float: left;
+	width: 650px;
+	font-family: "Baskerville Old Face";
+	font-size: 320%;
+	text-align: left;
+	padding-top: 25px;
+	padding-left: 75px;
+}
+header nav {
+	float: right;
+	width: 300px;
+	padding-top: 50px;
+	padding-right: 100px;
+}
+
+.block_menu {  
+    margin-right : 0.1%;
+    width: 100%;
+    float:left;
+    background: #00a85a;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+main { 
+	width: 100%;
+    /*float:left;*/
+	background: white; 
+	overflow: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+main h3 {
+	margin-top: 10px;
+	margin-bottom: 5px;	
+}
+main .container { 
+	max-width: 1000px;
+	margin: auto;
+}
+main .main_page_info {
+	float: left;
+}
+main .top-main {
+	max-width: 1125px;
+	margin: 0 auto; /* по центу */
+	padding-bottom: 150px;
+	line-height: 1.5;
+}
+main .bottom-main {
+	max-width: 1125px;
+	margin: auto; /* по центу */
+	padding-top: 50px;
+	line-height: 1.5;
+}
+main .top-main h2, h3 {
+	color: #00a85a;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+main .left-main { 
+	margin-top: 15px;
+	border-right: solid 1px #00a85a;
+	width: 50%;
+	float:left;
+	/*padding-bottom: 10px;*/
+}
+main .right-main {
+	margin-top: 15px;
+	width: 49%;
+	float:right;	
+}
+main .map1 {
+	margin-top: 15px;
+	width: 60%;
+	float:right;
+}
+.map2 {
+	position:relative;
+	padding-bottom: 10px;
+	max-width: 1000px;
+	margin: auto; /* по центу */
+}
+
+ul.content_block_main li {
+    display: inline; /* Отображать как строчный элемент */
+    list-style-type: none;
+    padding-left: 8%; 
+}
+ul.content_block_main li a {
+	color: #F2F1EF;
+}
+ul.content_block_main li a:hover {
+	text-decoration: underline;
+}
+
+/* для слайдшоу */
+.image ul, .image li {
+	padding-left: 0;
+	list-style-type: none;
+}    
+/*----------Затемнение-----------*/
+.blackout {
+	width: 100%;
+	top: 690px;
+	height: 180px;
+	position: absolute;
+	background: #00a85a;
+	color: #F2F1EF;
+	opacity: 0.8;
+}
+/*кнопки*/
+.right_btn1_2 {
+	right: 1%;
+	font-size: 24px;
+	text-align: right;      
+}
+.left_btn1_2 {
+	left: 1%;  
+	float: left;
+	text-align: left;    
+}
+.right_btn1_2, .left_btn1_2 {
+	position: absolute;
+	background: #00a85a;
+	padding: 14px 16px;
+	font-size: 24px;
+	color: black;
+	outline: none; /*убирает выделение синего цвета при нажатии на кнопку*/
+	cursor: pointer;
+	border: none;
+	border-radius: 55px;
+	margin-top:360px; 
+}
+button.right_btn1_2, button.left_btn1_2 {
+	color: #F2F1EF;
+}
+button.right_btn1_2:hover, button.left_btn1_2:hover {
+	opacity: 1;
+	color: #F2F1EF;
+}
+.image li:hover button {
+	opacity: 1;
+	transition: opacity .5s;
+}
+.image li:not(:hover) button {
+	opacity: 0;
+	transition: opacity .5s;
+}
+/*-----*/
+
+/* footer */
+ul {
+	list-style: circle;
+	list-style-position: inside;
+}
+footer {
+	background: #00a85a; 
+	overflow: auto;
+	padding: 10px;
+	color: #F2F1EF;
+	line-height: 1.5;
+}
+footer a {
+	color:#F2F1EF;
+}
+footer a:hover {
+	text-decoration: underline;
+	color:#F2F1EF;
+}
+footer .contact {
+	float: left;
+	width: 570px;
+	padding-left: 100px;
+}
+footer .sitemap {
+	float: right;	
+	width: 285px;
+	padding-right: 100px;
+}
+
+.tabs a span {
+	display: inline-block; 
+	border-radius: 5px 5px 0 0; 
+	width: 120px; 
+	margin-right: 10px; 
+	text-align: center; 
+	background: #ccc; 
+	padding: 5px;
+}
+.tabs a span.active { 
+	background: #ddd; 
+}
+
+.content {
+	background: white;
+	padding-bottom: 10px;
+}
+.content li{
+	list-style: none;
+	margin:  10px;
+	padding-left: 5px;
+	box-shadow: 0 0 0 10px #ddd;
+}
+.content input {
+	width: 85%;
+	height: 36px;
+	margin: 10px;
+	font-family: Jura;
+	text-align: justify;
+	font-size:  24px;
+	box-shadow: 0 0 0 10px #ddd;
+}
+.content button {
+	height: 40px;
+	width: 11%;
+	min-width: 90px;
+	font-size: 16px;
+	margin:10px;
+	font-family: Ubuntu;
+	background: white;
+	box-shadow: 0 -3px 0 11px #ddd;
+}
+
+
+/* Дополнения для faq.html */
+.href-faq {
+	text-decoration: underline;
+}
+.faq {
+	line-height: 1.5;
+}
+.faq h3 {
+	margin-bottom: 0px;
+}
+.faq p {
+	margin-bottom: 10px;
+}
+/*----*/
+
+/* Дополнения для vacancy.html */
+.vacancy-left {
+	max-width: 480px;
+	height: 530px;
+	float: left;
+	line-height: 1.5;
+}
+.vacancy-right {
+	max-width: 480px;
+	height: 530px;
+	float: right;
+	line-height: 1.5;
+}
+.button_request { /* для кнопки "Оставить заявку" */
+	display: block;
+	position: relative;			   /*расположение 		   */
+	left: 50%;					   /*             по       */
+	transform: translate(-50%, 0); /*                центру*/
+	width: 185px;
+	height: 34px; /* уменьшил ширину с 40px для того, чтоб по высоте текст выравнивался (костыль, другие методы не работают) */
+	background: #00a85a;
+	border: 0;
+	text-align: center;
+	padding-top: 6px; /* продолжение костыля */
+	outline: none; /*убирает выделение синего цвета при нажатии на кнопку*/
+	margin-top: 20px;
+	font-family: Ubuntu;
+	font-size: 105%;
+	color: #F2F1EF;
+	cursor: pointer;
+}
+.button_request:hover {
+	color: #F2F1EF;
+	text-decoration: underline;
+}
+.h2_request {
+	display: inline-block;
+	width: 460px;
+	background: #00a85a;
+	color: #F2F1EF; 
+}
+.form_request p {
+	line-height: 1.5;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.form_request input {
+	display: inline-block;
+	width: 430px;
+	height: 34px;
+	margin-bottom: 5px;
+	padding-left: 10px;
+	outline: none;
+}
+.form_request label {
+	display: block;
+	text-align: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 40px;
+	font-size: 80%;
+}
+/*----*/
+
+/*Всплывающее окно для заявки*/
+#zatemnenie {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+}
+#okno {
+    width: 500px;
+    height: 405px;
+    text-align: center;
+    position: absolute;
+	top: 0;
+    right: 0;
+	bottom: 0;
+    left: 0;
+    margin: auto;
+    background: white;
+}
+#zatemnenie:target {display: block;}
+.close {
+    display: block-inline;
+	/*position: relative;			   /*расположение 		   */
+	/*left: 50%;					   /*             по       */
+	/*transform: translate(-50%, 0); /*                центру*/
+	float: left;
+	width: 185px;
+	height: 29px; /* уменьшил ширину с 40px для того, чтоб по высоте текст выравнивался (костыль, другие методы не работают) */
+	background: #00a85a;
+	border: 0;
+	text-align: center;
+	padding-top: 11px; /* продолжение костыля */
+	outline: none; /*убирает выделение синего цвета при нажатии на кнопку*/
+	margin-left: 29px;
+	margin-top: 20px;
+	font-family: Ubuntu;
+	font-size: 105%;
+	color: #F2F1EF;
+	cursor: pointer;
+}
+.close:hover {
+	color: #F2F1EF;
+	text-decoration: underline;
+}
+.submit, .submit_register {
+	display: block-inline;
+	/*position: relative;			   /*расположение 		   */
+	/*left: 50%;					   /*             по       */
+	/*transform: translate(-50%, 0); /*                центру*/
+	float: right;
+	width: 185px;
+	height: 29px; /* уменьшил ширину с 40px для того, чтоб по высоте текст выравнивался (костыль, другие методы не работают) */
+	background: #00a85a;
+	border: 0;
+	text-align: center;
+	padding-top: 11px; /* продолжение костыля */
+	outline: none; /*убирает выделение синего цвета при нажатии на кнопку*/
+	margin-right: 29px;
+	margin-top: 20px;
+	font-family: Ubuntu;
+	font-size: 105%;
+	color: #F2F1EF;
+	cursor: pointer;
+}
+.submit:hover, .submit_register:hover {
+	color: #F2F1EF;
+	text-decoration: underline;
+}
+/*----*/
+
+/*Вспылвающее окно для входа*/
+#login_window {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+}
+#login_window:target {display: block;}
+#okno_login {
+    width: 500px;
+    height: 330px;
+    text-align: center;
+    position: absolute;
+	top: 0;
+    right: 0;
+	bottom: 0;
+    left: 0;
+    margin: auto;
+    background: white;
+}
+
+/*----*/
+
+/*Всплывающее окно для регистрации*/
+#register_window {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+}
+#register_window:target {display: block;}
+#okno_register {
+    width: 970px;
+    height: 435px;
+    text-align: center;
+    position: absolute;
+	top: 0;
+    right: 0;
+	bottom: 0;
+    left: 0;
+    margin: auto;
+    background: white;
+}
+.h2_register {
+	display: inline-block;
+	width: 930px;
+	background: #00a85a;
+	color: #F2F1EF; 
+}
+.form_register p {
+	line-height: 1.5;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.inputbox_register_left {
+	float: left;
+	margin-left: 27px;
+	height: 75px;
+}
+.inputbox_register_right {
+	float: right;
+	margin-right: 27px;
+	height: 75px;
+}
+.close_register {
+    display: block-inline;
+	/*position: relative;			   /*расположение 		   */
+	/*left: 50%;					   /*             по       */
+	/*transform: translate(-50%, 0); /*                центру*/
+	float: right;
+	width: 185px;
+	height: 29px; /* уменьшил ширину с 40px для того, чтоб по высоте текст выравнивался (костыль, другие методы не работают) */
+	background: #00a85a;
+	border: 0;
+	text-align: center;
+	padding-top: 11px; /* продолжение костыля */
+	outline: none; /*убирает выделение синего цвета при нажатии на кнопку*/
+	margin-right: 70px;
+	margin-top: 20px;
+	font-family: Ubuntu;
+	font-size: 105%;
+	color: #F2F1EF;
+	cursor: pointer;
+}
+.close_register:hover {
+	color: #F2F1EF;
+	text-decoration: underline;
+}
+/*----*/
+
+
+/*Таблица Услуги и Цены*/
+table.price_table {
+	width:100%;
+	border: 1;
+	border-color: black;
+}
+table.price_table td{
+	padding: 10px;
+	vertical-align: middle;
+}
+table.price_table td.td-name {
+	background-color:#00a85a;
+}
+table.price_table td h3 {
+	margin-bottom:4px !important;
+	margin-top:4px !important;
+	font-size:21px !important;
+	text-align: center; 
+	color:#ffffff;
+}
+table.price_table td p {
+	text-align: center;
+}
+
+/*----*/
