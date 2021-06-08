@@ -69,6 +69,8 @@ UsersController.create = function(req, res) {
   console.log('Вызвано действие: создать пользователя');
     var username = req.body.username,
 		date_of_birth = req.body.date_of_birth,
+        name_pet = req.body.name_pet,
+        type_pet = req.body.type_pet,
 		phone = req.body.phone,
 		email = req.body.email,
 		password = req.body.password,
@@ -87,6 +89,8 @@ UsersController.create = function(req, res) {
             var newUser = new User({
               "username": username, 
     			    "date_of_birth": date_of_birth,
+                "name_pet": name_pet,
+                "type_pet": type_pet,
     		      "phone": phone,
     		      "email": email,
     		      "password": password,

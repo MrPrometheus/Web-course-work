@@ -23,6 +23,56 @@ var EditUsernameOnClick = function (user, callback) {
 	return $usersListItem;
 }
 
+var EditNamePetOnClick = function (user, callback) {
+	var $usersListItem = $("<li>").text("Кличка: " + user.name_pet);
+
+	var $usersRemoveLink = $("<a>").attr("href", "#");
+	$usersRemoveLink.addClass("link");
+	$usersRemoveLink.text("Редактировать");
+	$usersRemoveLink.on("click", function () {
+		var newUsername = prompt ("Введите новую кличку: ", user.name_pet);
+		$.ajax({
+			url: "/users/" + user._id,
+			type: "PUT",
+			data: { name_pet: newUsername }
+		}).done(function (responde) {
+			callback();
+		}).fail(function (err) {
+			console.log("error on edit username!");
+		});
+		return false;
+
+	});
+	$usersListItem.append($usersRemoveLink);
+
+	return $usersListItem;
+}
+
+var EditTypePetOnClick = function (user, callback) {
+	var $usersListItem = $("<li>").text("Вид: " + user.type_pet);
+
+	var $usersRemoveLink = $("<a>").attr("href", "#");
+	$usersRemoveLink.addClass("link");
+	$usersRemoveLink.text("Редактировать");
+	$usersRemoveLink.on("click", function () {
+		var newUsername = prompt ("Введите вид питомца: ", user.type_pet);
+		$.ajax({
+			url: "/users/" + user._id,
+			type: "PUT",
+			data: { type_pet: newUsername }
+		}).done(function (responde) {
+			callback();
+		}).fail(function (err) {
+			console.log("error on edit username!");
+		});
+		return false;
+
+	});
+	$usersListItem.append($usersRemoveLink);
+
+	return $usersListItem;
+}
+
 var EditDateOnClick = function (user, callback) {
 	var date = new Date(user.date_of_birth);
 	var optionsDate = {
@@ -191,6 +241,14 @@ var main = function () {
 				var $content = $("<ul>");
 
 				$content.append(EditUsernameOnClick(user, function() {
+					$(".tabs a:first-child span").trigger("click");
+				}));
+
+				$content.append(EditNamePetOnClick(user, function() {
+					$(".tabs a:first-child span").trigger("click");
+				}));
+
+				$content.append(EditTypePetOnClick(user, function() {
 					$(".tabs a:first-child span").trigger("click");
 				}));
 
