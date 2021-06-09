@@ -6,11 +6,8 @@ var express = require("express"),
 	AppoController = require("./controllers/appointments_controller.js");
 	
 app.use('/',express.static(__dirname + "/client"));
-//app.use('/users/:id',express.static(__dirname + "/client"));
 
-// Это модель Mongoose для задач
 http.createServer(app).listen(3000);
-// командуем Express принять поступающие
 // объекты JSON
 app.use(express.urlencoded({ extended: true }));
 // подключаемся к хранилищу данных Amazeriffic в Mongo
