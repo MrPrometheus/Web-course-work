@@ -285,6 +285,10 @@ var main = function () {
 
 			$linkAdd.on("click", function() {
 				if (confirm("Вы действительно хотите создать запись?")) {
+					if(new Date($inpDate.val()) <= new Date()) {
+						alert("Дата приема не может быть создана задним числом")
+						return
+					}
 					$.ajax({
 						url: "appoint/",
 						type: "POST",
